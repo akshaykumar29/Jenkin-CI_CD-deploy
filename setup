@@ -1,0 +1,34 @@
+How to deploy code using jenkins with docker 
+
+Docker server command:-
+
+sudo chmod 666 /var/run/docker.sock
+Docker login.
+Pem file should be upload in sshagent credentials.
+
+Jenkins server command:-
+1. Allow jenkins to connect to docker socket
+Usermod -aG docker jenkins
+2. Install docker and git here as well
+
+Jenkins:-
+
+plugins:-
+1. Docker pipeline
+2. Docker all
+3. Git
+4. sshagnet
+5. Ssh all
+6. Cloudbess docker push
+
+Credentials:-
+
+1. Create cred for docker-hub login
+2. Create cred for sshagent with pem file of prod-server.
+
+
+
+
+
+
+
